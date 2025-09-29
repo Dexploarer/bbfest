@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Calendar, MapPin, Clock, Ticket, Beer, Music, Users, Star } from 'lucide-react';
+import { Calendar, MapPin, Clock, Ticket, Beer, Music, Users, Star, ExternalLink, Instagram, Facebook } from 'lucide-react';
 
 export default function Home() {
   const [activeDay, setActiveDay] = useState('saturday');
@@ -320,18 +320,76 @@ export default function Home() {
                 <CardTitle className="text-2xl text-amber-900 mb-4">Festival Partnership</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <div className="space-y-6">
+                  <div className="space-y-6">
                   <div className="flex items-center justify-center gap-4">
                     <div className="text-center">
                       <Music className="h-12 w-12 text-amber-600 mx-auto mb-2" />
                       <p className="text-sm font-semibold text-amber-900">The Train Station</p>
                       <p className="text-xs text-amber-700">Corbin, KY</p>
+                      <div className="flex justify-center gap-2 mt-2">
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          onClick={() => window.open('https://www.thetrainstationcorbin.com', '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3 mr-1" />
+                          Website
+                        </Button>
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          onClick={() => window.open('https://www.instagram.com/the_train_station_corbin_ky', '_blank')}
+                        >
+                          <Instagram className="h-3 w-3 mr-1" />
+                          Instagram
+                        </Button>
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          onClick={() => window.open('https://www.facebook.com/profile.php?id=61551568211664', '_blank')}
+                        >
+                          <Facebook className="h-3 w-3 mr-1" />
+                          Facebook
+                        </Button>
+                      </div>
                     </div>
                     <div className="text-4xl text-amber-600">+</div>
                     <div className="text-center">
                       <Beer className="h-12 w-12 text-amber-600 mx-auto mb-2" />
                       <p className="text-sm font-semibold text-amber-900">Maiden City Brewing</p>
                       <p className="text-xs text-amber-700">Cynthiana, KY</p>
+                      <div className="flex justify-center gap-2 mt-2">
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          onClick={() => window.open('https://www.maidencitybrewing.com', '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3 mr-1" />
+                          Website
+                        </Button>
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          onClick={() => window.open('https://www.instagram.com/mcbrewingco', '_blank')}
+                        >
+                          <Instagram className="h-3 w-3 mr-1" />
+                          Instagram
+                        </Button>
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          onClick={() => window.open('https://www.facebook.com/maidencitybrewing', '_blank')}
+                        >
+                          <Facebook className="h-3 w-3 mr-1" />
+                          Facebook
+                        </Button>
+                      </div>
                     </div>
                   </div>
                   
@@ -363,32 +421,22 @@ export default function Home() {
           </div>
 
           {/* Spotify Playlist */}
-          <div className="mb-12">
-            <Card className="border-amber-200 shadow-lg bg-white">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl text-amber-900 flex items-center justify-center gap-2">
-                  <Music className="h-6 w-6" />
-                  Festival Playlist
-                </CardTitle>
-                <p className="text-amber-700">Get in the festival spirit with our curated playlist</p>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="max-w-2xl mx-auto">
-                  <iframe 
-                    data-testid="embed-iframe" 
-                    style={{borderRadius: '12px'}} 
-                    src="https://open.spotify.com/embed/playlist/0fmZAygl9DOcbVoQ90vUGO?utm_source=generator" 
-                    width="100%" 
-                    height="352" 
-                    frameBorder="0" 
-                    allowFullScreen 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy"
-                    className="rounded-xl shadow-lg"
-                  ></iframe>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="mb-12 text-center">
+            <div className="max-w-2xl mx-auto">
+              <iframe 
+                data-testid="embed-iframe" 
+                style={{borderRadius: '12px'}} 
+                src="https://open.spotify.com/embed/playlist/0fmZAygl9DOcbVoQ90vUGO?utm_source=generator" 
+                width="100%" 
+                height="352" 
+                frameBorder="0" 
+                allowFullScreen 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+                className="rounded-xl shadow-lg"
+              ></iframe>
+            </div>
+            <p className="text-amber-700 mt-4 text-sm">Get in the festival spirit with our curated playlist</p>
           </div>
 
           <Tabs value={activeDay} onValueChange={setActiveDay} className="w-full">
@@ -622,6 +670,184 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Lodging Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-amber-900 mb-6">Lodging Options</h2>
+            <p className="text-xl text-amber-700 max-w-4xl mx-auto">
+              Find comfortable accommodations within a 30-minute drive of Cynthiana for your festival stay
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Cynthiana Lodging */}
+            <Card className="border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-amber-900 flex items-center gap-2">
+                  <MapPin className="h-5 w-5" />
+                  Cynthiana, KY
+                </CardTitle>
+                <p className="text-sm text-amber-600">Local accommodations</p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="border-l-4 border-amber-500 pl-4">
+                  <h4 className="font-semibold text-amber-900">Ashford Acres Inn</h4>
+                  <p className="text-sm text-amber-700 mb-2">
+                    Historic bed & breakfast with 5 suites, complimentary breakfast, and countryside access
+                  </p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white"
+                    onClick={() => window.open('https://www.ashfordacresinn.com/stays', '_blank')}
+                  >
+                    Book Now
+                  </Button>
+                </div>
+                
+                <div className="border-l-4 border-amber-500 pl-4">
+                  <h4 className="font-semibold text-amber-900">BBQ Ready Retreat</h4>
+                  <p className="text-sm text-amber-700 mb-2">
+                    Private riverside retreat with full kitchen and scenic Licking River views
+                  </p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/hike-and-fish-nature-escape-near-licking-river.html', '_blank')}
+                  >
+                    Book Now
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Paris Lodging */}
+            <Card className="border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-amber-900 flex items-center gap-2">
+                  <MapPin className="h-5 w-5" />
+                  Paris, KY
+                </CardTitle>
+                <p className="text-sm text-amber-600">12 miles west • 20 min drive</p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="border-l-4 border-amber-500 pl-4">
+                  <h4 className="font-semibold text-amber-900">Best Western Paris Inn</h4>
+                  <p className="text-sm text-amber-700 mb-2">
+                    Reliable chain hotel with breakfast buffet, free parking, and easy access to Bourbon Trail
+                  </p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/best-western-paris-inn.html', '_blank')}
+                  >
+                    Book Now
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Georgetown Lodging */}
+            <Card className="border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-amber-900 flex items-center gap-2">
+                  <MapPin className="h-5 w-5" />
+                  Georgetown, KY
+                </CardTitle>
+                <p className="text-sm text-amber-600">I-75 access • 20 min drive</p>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="border-l-4 border-amber-500 pl-3">
+                  <h4 className="font-semibold text-amber-900 text-sm">Best Western Plus</h4>
+                  <p className="text-xs text-amber-700 mb-1">Suites, indoor pool, breakfast</p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs px-2 py-1"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/best-western-plus-georgetown-corporate-center.html', '_blank')}
+                  >
+                    Book
+                  </Button>
+                </div>
+                
+                <div className="border-l-4 border-amber-500 pl-3">
+                  <h4 className="font-semibold text-amber-900 text-sm">Country Inn & Suites</h4>
+                  <p className="text-xs text-amber-700 mb-1">Indoor pool, fitness center</p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs px-2 py-1"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/country-inn-suites-georgetown-ky.html', '_blank')}
+                  >
+                    Book
+                  </Button>
+                </div>
+                
+                <div className="border-l-4 border-amber-500 pl-3">
+                  <h4 className="font-semibold text-amber-900 text-sm">Hampton Inn</h4>
+                  <p className="text-xs text-amber-700 mb-1">Modern rooms, express check-in</p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs px-2 py-1"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/hampton-inn-lexington-georgetown.html', '_blank')}
+                  >
+                    Book
+                  </Button>
+                </div>
+                
+                <div className="border-l-4 border-amber-500 pl-3">
+                  <h4 className="font-semibold text-amber-900 text-sm">Holiday Inn Express</h4>
+                  <p className="text-xs text-amber-700 mb-1">Shuttle service, hot breakfast</p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs px-2 py-1"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/holiday-inn-express-georgetown.html', '_blank')}
+                  >
+                    Book
+                  </Button>
+                </div>
+                
+                <div className="border-l-4 border-amber-500 pl-3">
+                  <h4 className="font-semibold text-amber-900 text-sm">Super 8 by Wyndham</h4>
+                  <p className="text-xs text-amber-700 mb-1">Budget-friendly, continental breakfast</p>
+                  <Button 
+                    size="sm" 
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs px-2 py-1"
+                    onClick={() => window.open('https://www.booking.com/hotel/us/super-8-by-wyndham-georgetown-ky.html', '_blank')}
+                  >
+                    Book
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 max-w-2xl mx-auto">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-amber-900 mb-3">Booking Tips</h3>
+                <div className="grid md:grid-cols-2 gap-4 text-sm text-amber-700">
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Book early for October 4-5, 2025 dates</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>All properties within 30 minutes of festival</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Check cancellation policies</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Consider Bourbon Trail access from Paris</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-amber-900 text-amber-100 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -630,7 +856,7 @@ export default function Home() {
 
           <div className="mb-8">
             <p className="text-lg mb-4 text-amber-200 text-center">Presented by</p>
-            <div className="flex items-center justify-center gap-8 mb-4">
+            <div className="flex items-center justify-center gap-8 mb-6">
               <div className="flex flex-col items-center gap-2">
                 <img
                   src="/assets/ts.png"
@@ -638,6 +864,35 @@ export default function Home() {
                   className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
                 <p className="text-sm text-amber-300">The Train Station</p>
+                <div className="flex gap-2">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    onClick={() => window.open('https://www.thetrainstationcorbin.com', '_blank')}
+                  >
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    Website
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    onClick={() => window.open('https://www.instagram.com/the_train_station_corbin_ky', '_blank')}
+                  >
+                    <Instagram className="h-3 w-3 mr-1" />
+                    Instagram
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    onClick={() => window.open('https://www.facebook.com/profile.php?id=61551568211664', '_blank')}
+                  >
+                    <Facebook className="h-3 w-3 mr-1" />
+                    Facebook
+                  </Button>
+                </div>
               </div>
               <div className="text-amber-200 text-2xl">&</div>
               <div className="flex flex-col items-center gap-2">
@@ -647,6 +902,35 @@ export default function Home() {
                   className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
                 <p className="text-sm text-amber-300">Maiden City Brewing</p>
+                <div className="flex gap-2">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    onClick={() => window.open('https://www.maidencitybrewing.com', '_blank')}
+                  >
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    Website
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    onClick={() => window.open('https://www.instagram.com/mcbrewingco', '_blank')}
+                  >
+                    <Instagram className="h-3 w-3 mr-1" />
+                    Instagram
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    onClick={() => window.open('https://www.facebook.com/maidencitybrewing', '_blank')}
+                  >
+                    <Facebook className="h-3 w-3 mr-1" />
+                    Facebook
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
