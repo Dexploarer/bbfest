@@ -362,6 +362,35 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Spotify Playlist */}
+          <div className="mb-12">
+            <Card className="border-amber-200 shadow-lg bg-white">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-amber-900 flex items-center justify-center gap-2">
+                  <Music className="h-6 w-6" />
+                  Festival Playlist
+                </CardTitle>
+                <p className="text-amber-700">Get in the festival spirit with our curated playlist</p>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="max-w-2xl mx-auto">
+                  <iframe 
+                    data-testid="embed-iframe" 
+                    style={{borderRadius: '12px'}} 
+                    src="https://open.spotify.com/embed/playlist/0fmZAygl9DOcbVoQ90vUGO?utm_source=generator" 
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allowFullScreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    className="rounded-xl shadow-lg"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <Tabs value={activeDay} onValueChange={setActiveDay} className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 bg-amber-100">
               <TabsTrigger 
