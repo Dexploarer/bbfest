@@ -21,7 +21,7 @@ export default function Home() {
     'Hannah Wheeler', 'Westley Metcalfe', 'Arianna & The Bourbon Britches',
     'Gracie Yates', 'Brock Burton & No Handshakes Band',
     'Cody Lee Meece & The Poor Excuses', 'Moonlight Mile',
-    'Smilo & The Ghost', 'Buffalo wabs and the price hill hustle', 'Paul McDonald and the Mourning Doves'
+    'Smilo & The Ghost', 'Buffalo wabs and The Price Hill Hustle', 'Paul McDonald and the Mourning Doves'
   ];
 
   const ticketOptions = [
@@ -426,7 +426,7 @@ export default function Home() {
                         key={index}
                         variant="outline"
                         className={`p-3 text-center justify-center ${
-                          artist === 'Paul McDonald and the Mourning Doves' || artist === 'Buffalo wabs and the price hill hustle'
+                          artist === 'Paul McDonald and the Mourning Doves' || artist === 'Buffalo wabs and The Price Hill Hustle'
                             ? 'bg-amber-600 text-white border-amber-600 text-lg font-bold'
                             : 'border-amber-300 text-amber-800 hover:bg-amber-100'
                         }`}
@@ -437,7 +437,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6 text-center">
                     <Badge className="bg-amber-600 text-white px-4 py-2 text-lg">
-                      Co-Headliners: Paul McDonald and the Mourning Doves & Buffalo wabs and the price hill hustle
+                      Co-Headliners: Paul McDonald and the Mourning Doves & Buffalo wabs and The Price Hill Hustle
                     </Badge>
                   </div>
                 </CardContent>
