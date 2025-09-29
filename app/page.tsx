@@ -21,7 +21,7 @@ export default function Home() {
     'Hannah Wheeler', 'Westley Metcalfe', 'Arianna & The Bourbon Britches',
     'Gracie Yates', 'Brock Burton & No Handshakes Band',
     'Cody Lee Meece & The Poor Excuses', 'Moonlight Mile',
-    'Smilo & The Ghost', 'Buffalo Wabs', 'Paul McDonald'
+    'Smilo & The Ghost', 'Buffalo wabs and the price hill hustle', 'Paul McDonald and the Mourning Doves'
   ];
 
   const ticketOptions = [
@@ -207,6 +207,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Maiden City Gallery */}
+      <section className="py-16 px-4 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-amber-900 mb-6">Maiden City Gallery</h2>
+            <p className="text-xl text-amber-700 max-w-3xl mx-auto">
+              Experience the beauty of Maiden City through our curated collection of local photography
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+              <img
+                src="/assets/mc2.jpg"
+                alt="Maiden City Scene 1"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+              <img
+                src="/assets/mc3.jpg"
+                alt="Maiden City Scene 2"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+              <img
+                src="/assets/mc4.jpg"
+                alt="Maiden City Scene 3"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+              <img
+                src="/assets/mc5.avif"
+                alt="Maiden City Scene 4"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-amber-700 italic">
+              Photography captured throughout Cynthiana, Kentucky
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Train Station Partnership Section */}
       <section className="py-16 px-4 bg-gradient-to-b from-amber-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
@@ -370,8 +426,8 @@ export default function Home() {
                         key={index}
                         variant="outline"
                         className={`p-3 text-center justify-center ${
-                          artist === 'Paul McDonald' || artist === 'Buffalo Wabs'
-                            ? 'bg-amber-600 text-white border-amber-600 text-lg font-bold' 
+                          artist === 'Paul McDonald and the Mourning Doves' || artist === 'Buffalo wabs and the price hill hustle'
+                            ? 'bg-amber-600 text-white border-amber-600 text-lg font-bold'
                             : 'border-amber-300 text-amber-800 hover:bg-amber-100'
                         }`}
                       >
@@ -381,7 +437,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6 text-center">
                     <Badge className="bg-amber-600 text-white px-4 py-2 text-lg">
-                      Co-Headliners: Paul McDonald & Buffalo Wabs
+                      Co-Headliners: Paul McDonald and the Mourning Doves & Buffalo wabs and the price hill hustle
                     </Badge>
                   </div>
                 </CardContent>
@@ -542,7 +598,29 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-4">Ballads & Brews 2025</h3>
           <p className="text-xl mb-4">Where the finest ballads meet the tastiest brews</p>
-          <p className="text-lg mb-6 text-amber-200">A Train Station & Maiden City Brewing Partnership</p>
+
+          <div className="mb-8">
+            <p className="text-lg mb-4 text-amber-200 text-center">Presented by</p>
+            <div className="flex items-center justify-center gap-8 mb-4">
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src="/assets/ts.png"
+                  alt="The Train Station Logo"
+                  className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+                <p className="text-sm text-amber-300">The Train Station</p>
+              </div>
+              <div className="text-amber-200 text-2xl">&</div>
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src="/assets/tp.png"
+                  alt="Maiden City Brewing Logo"
+                  className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+                <p className="text-sm text-amber-300">Maiden City Brewing</p>
+              </div>
+            </div>
+          </div>
           
           <div className="flex flex-wrap justify-center gap-6 text-sm mb-8">
             <span>October 4-5, 2025</span>
