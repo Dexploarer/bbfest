@@ -326,34 +326,28 @@ export default function Home() {
                       <Music className="h-12 w-12 text-amber-600 mx-auto mb-2" />
                       <p className="text-sm font-semibold text-amber-900">The Train Station</p>
                       <p className="text-xs text-amber-700">Corbin, KY</p>
-                      <div className="flex justify-center gap-2 mt-2">
-                        <Button 
-                          size="sm" 
-                          variant="outline" 
-                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                      <div className="flex justify-center gap-3 mt-2">
+                        <button 
+                          className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
                           onClick={() => window.open('https://www.thetrainstationcorbin.com', '_blank')}
+                          title="Website"
                         >
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          Website
-                        </Button>
-                        <Button 
-                          size="sm" 
-                          variant="outline" 
-                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          <ExternalLink className="h-5 w-5" />
+                        </button>
+                        <button 
+                          className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
                           onClick={() => window.open('https://www.instagram.com/the_train_station_corbin_ky', '_blank')}
+                          title="Instagram"
                         >
-                          <Instagram className="h-3 w-3 mr-1" />
-                          Instagram
-                        </Button>
-                        <Button 
-                          size="sm" 
-                          variant="outline" 
-                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          <Instagram className="h-5 w-5" />
+                        </button>
+                        <button 
+                          className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
                           onClick={() => window.open('https://www.facebook.com/profile.php?id=61551568211664', '_blank')}
+                          title="Facebook"
                         >
-                          <Facebook className="h-3 w-3 mr-1" />
-                          Facebook
-                        </Button>
+                          <Facebook className="h-5 w-5" />
+                        </button>
                       </div>
                     </div>
                     <div className="text-4xl text-amber-600">+</div>
@@ -361,34 +355,28 @@ export default function Home() {
                       <Beer className="h-12 w-12 text-amber-600 mx-auto mb-2" />
                       <p className="text-sm font-semibold text-amber-900">Maiden City Brewing</p>
                       <p className="text-xs text-amber-700">Cynthiana, KY</p>
-                      <div className="flex justify-center gap-2 mt-2">
-                        <Button 
-                          size="sm" 
-                          variant="outline" 
-                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                      <div className="flex justify-center gap-3 mt-2">
+                        <button 
+                          className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
                           onClick={() => window.open('https://www.maidencitybrewing.com', '_blank')}
+                          title="Website"
                         >
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          Website
-                        </Button>
-                        <Button 
-                          size="sm" 
-                          variant="outline" 
-                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          <ExternalLink className="h-5 w-5" />
+                        </button>
+                        <button 
+                          className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
                           onClick={() => window.open('https://www.instagram.com/mcbrewingco', '_blank')}
+                          title="Instagram"
                         >
-                          <Instagram className="h-3 w-3 mr-1" />
-                          Instagram
-                        </Button>
-                        <Button 
-                          size="sm" 
-                          variant="outline" 
-                          className="text-xs px-2 py-1 border-amber-300 text-amber-700 hover:bg-amber-50"
+                          <Instagram className="h-5 w-5" />
+                        </button>
+                        <button 
+                          className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
                           onClick={() => window.open('https://www.facebook.com/maidencitybrewing', '_blank')}
+                          title="Facebook"
                         >
-                          <Facebook className="h-3 w-3 mr-1" />
-                          Facebook
-                        </Button>
+                          <Facebook className="h-5 w-5" />
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -864,34 +852,28 @@ export default function Home() {
                   className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
                 <p className="text-sm text-amber-300">The Train Station</p>
-                <div className="flex gap-2">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                <div className="flex gap-3">
+                  <button 
+                    className="text-amber-200 hover:text-amber-100 transition-colors duration-200"
                     onClick={() => window.open('https://www.thetrainstationcorbin.com', '_blank')}
+                    title="Website"
                   >
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Website
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    <ExternalLink className="h-5 w-5" />
+                  </button>
+                  <button 
+                    className="text-amber-200 hover:text-amber-100 transition-colors duration-200"
                     onClick={() => window.open('https://www.instagram.com/the_train_station_corbin_ky', '_blank')}
+                    title="Instagram"
                   >
-                    <Instagram className="h-3 w-3 mr-1" />
-                    Instagram
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    <Instagram className="h-5 w-5" />
+                  </button>
+                  <button 
+                    className="text-amber-200 hover:text-amber-100 transition-colors duration-200"
                     onClick={() => window.open('https://www.facebook.com/profile.php?id=61551568211664', '_blank')}
+                    title="Facebook"
                   >
-                    <Facebook className="h-3 w-3 mr-1" />
-                    Facebook
-                  </Button>
+                    <Facebook className="h-5 w-5" />
+                  </button>
                 </div>
               </div>
               <div className="text-amber-200 text-2xl">&</div>
@@ -902,34 +884,28 @@ export default function Home() {
                   className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
                 <p className="text-sm text-amber-300">Maiden City Brewing</p>
-                <div className="flex gap-2">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                <div className="flex gap-3">
+                  <button 
+                    className="text-amber-200 hover:text-amber-100 transition-colors duration-200"
                     onClick={() => window.open('https://www.maidencitybrewing.com', '_blank')}
+                    title="Website"
                   >
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Website
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    <ExternalLink className="h-5 w-5" />
+                  </button>
+                  <button 
+                    className="text-amber-200 hover:text-amber-100 transition-colors duration-200"
                     onClick={() => window.open('https://www.instagram.com/mcbrewingco', '_blank')}
+                    title="Instagram"
                   >
-                    <Instagram className="h-3 w-3 mr-1" />
-                    Instagram
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="text-xs px-2 py-1 border-amber-400 text-amber-200 hover:bg-amber-800"
+                    <Instagram className="h-5 w-5" />
+                  </button>
+                  <button 
+                    className="text-amber-200 hover:text-amber-100 transition-colors duration-200"
                     onClick={() => window.open('https://www.facebook.com/maidencitybrewing', '_blank')}
+                    title="Facebook"
                   >
-                    <Facebook className="h-3 w-3 mr-1" />
-                    Facebook
-                  </Button>
+                    <Facebook className="h-5 w-5" />
+                  </button>
                 </div>
               </div>
             </div>
